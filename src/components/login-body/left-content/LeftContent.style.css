@@ -1,0 +1,16 @@
+.left-content {
+  width: 40%;
+  margin-top: 5em;
+}
+
+.left-content img {
+  display: block;
+  width: 300px;
+  margin: 0 auto 50px;
+}
+
+.left-content p {
+  font-style: italic;
+  color: var(--sec-clr);
+  font-size: var(--fs-m);
+}

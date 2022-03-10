@@ -1,0 +1,43 @@
+.login-form {
+  width: min(60%, 34em);
+  background: var(--sec-clr);
+  margin-top: 5em;
+  border-radius: 1.25em;
+  padding-top: 2.5em;
+  padding-bottom: 5em;
+}
+
+.login-form h4 {
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+.login-form-field {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.login-form-field label {
+  display: block;
+  font-size: calc(var(--fs-sm) - 5px);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 1.25em 0.5em;
+  border-radius: 10px;
+  border: 1px solid var(--pry-clr);
+}
+
+.login-form > p {
+  text-align: center;
+}
+
+.login-form > p:hover {
+  cursor: pointer;
+}

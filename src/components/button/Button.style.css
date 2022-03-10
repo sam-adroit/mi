@@ -1,0 +1,34 @@
+.btn {
+  font-size: var(--fs-sm);
+  border-radius: 1.875rem;
+  border: 1px solid var(--pry-clr);
+  cursor: pointer;
+}
+
+.dark {
+  background: var(--pry-clr);
+  color: var(--sec-clr);
+  padding: 0.8rem 3.125rem;
+}
+
+.dark:hover {
+  background: transparent;
+  color: var(--pry-clr);
+}
+
+.light {
+  background: transparent;
+  color: var(--pry-clr);
+  padding: 0.8rem 1.875rem;
+}
+
+.light:hover {
+  background: var(--pry-clr);
+  color: var(--sec-clr);
+}
+
+.login-btn {
+  display: block;
+  margin: 50px auto 20px auto;
+  width: 50%;
+}
