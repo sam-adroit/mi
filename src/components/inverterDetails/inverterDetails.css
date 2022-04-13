@@ -1,0 +1,79 @@
+.inverter-details h2 {
+  color: var(--sec-clr);
+  font-size: 1.25rem;
+  padding-bottom: 0.5em;
+}
+
+.inverter-reading {
+  display: flex;
+}
+
+.input-reading,
+.output-reading {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.input-reading {
+  padding-right: 1.8em;
+}
+
+.output-reading {
+  padding-left: 1.8em;
+}
+
+.input-reading::after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.input-reading li,
+.output-reading li {
+  color: var(--sec-clr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.input-reading li > span,
+.output-reading li > span {
+  padding: 0.3em 1em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  margin-left: 1em;
+  color: #a7a7a7;
+}
+
+.units {
+  color: blue;
+}
+
+.input-reading li .red,
+.output-reading li .red {
+  color: red;
+}
+.input-reading li .green,
+.output-reading li .green {
+  color: #20e734;
+}
+
+.dash-inverter-details button {
+  padding: 0.6em 1.5em;
+  background: var(--sec-clr);
+  color: blue;
+  display: block;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 100px;
+}
+
+.dash-inverter-details button:hover {
+  cursor: pointer;
+}

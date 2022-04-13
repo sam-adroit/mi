@@ -1,0 +1,55 @@
+.Message {
+  display: flex;
+  gap: 0.85em;
+  margin: 1em;
+}
+
+.Message img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.name-message-list h2 {
+  color: var(--sec-clr);
+  font-size: 1.1rem;
+  padding-bottom: 0.5em;
+}
+
+.message-time {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6em;
+}
+
+.message-time p {
+  padding: 1em;
+  font-size: 1rem;
+  background: #4b4c4d;
+  border-radius: 15px;
+  color: var(--sec-clr);
+}
+
+.message-time span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+
+.reverse {
+  width: max-content;
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.reverse h2 {
+  width: max-content;
+  margin-left: auto;
+}
+
+.chat-reverse {
+  flex-direction: row-reverse;
+}
+
+.chat-reverse p {
+  background: rgba(47, 87, 227, 0.5);
+}

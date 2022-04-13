@@ -1,5 +1,5 @@
 .login-form {
-  width: min(60%, 34em);
+  width: max(40%, 28em);
   background: var(--sec-clr);
   margin-top: 5em;
   border-radius: 1.25em;

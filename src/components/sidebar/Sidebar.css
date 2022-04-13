@@ -1,0 +1,47 @@
+.Sidebar {
+  width: max(250px, 20%);
+  background: var(--dash-bg-clr);
+}
+
+.dash-logo {
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+.dash-logo img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 30px auto 20px auto;
+}
+
+.dash-logo h1 {
+  color: var(--sec-clr);
+  font-size: var(--fs-sm);
+  text-align: center;
+}
+
+.dash--nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.dash--nav-list-item {
+  padding: 0px 0px 20px 50px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: var(--sec-clr);
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link span {
+  padding-left: 0.6em;
+  letter-spacing: 1.5px;
+}

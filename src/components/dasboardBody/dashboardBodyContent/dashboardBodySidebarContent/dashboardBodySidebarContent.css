@@ -1,0 +1,37 @@
+.dashboard-sidebar--content {
+  background: var(--dash-bg-clr);
+  border-radius: 10px 0 0 10px;
+  flex-grow: 1;
+}
+
+.dashboard-sidebar--content > h2 {
+  color: var(--sec-clr);
+  padding: 1em 1em 0 1em;
+  font-size: 1.1rem;
+}
+
+.control--panel-content {
+  width: max-content;
+  background: #303233;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+.control--panel-content h2 {
+  color: var(--sec-clr);
+  margin: 1em 1em 0 1em;
+  padding: 1em 0 0.5em 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(186, 180, 180, 0.1);
+}
+
+.control--panel-content p {
+  color: var(--sec-clr);
+  font-size: 1rem;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.control--panel-content p:hover {
+  cursor: pointer;
+}

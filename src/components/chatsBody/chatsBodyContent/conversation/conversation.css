@@ -1,0 +1,6 @@
+.conversation {
+  background: var(--dash-bg-clr);
+  margin-left: 1em;
+  flex-grow: 1;
+  border-radius: 10px;
+}

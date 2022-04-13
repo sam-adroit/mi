@@ -1,0 +1,10 @@
+.clients-list {
+  border-radius: 10px;
+  background: #252728;
+}
+
+.clients-list h2 {
+  padding: 1em;
+  color: var(--sec-clr);
+  font-size: 1.2rem;
+}

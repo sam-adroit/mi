@@ -1,0 +1,27 @@
+.inverter-readings {
+  border-bottom: 1px solid rgba(186, 180, 180, 0.3);
+}
+.inverter-reading-lists {
+  padding: 0;
+  list-style: none;
+  margin: 1em 1em 0 1em;
+}
+
+.inverter-reading-lists li {
+  color: var(--sec-clr);
+  font-size: 0.9rem;
+  padding-bottom: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.toggle-inv,
+.lock-in {
+  font-size: 2em;
+}
+
+.toggle-inv {
+  color: blue;
+}

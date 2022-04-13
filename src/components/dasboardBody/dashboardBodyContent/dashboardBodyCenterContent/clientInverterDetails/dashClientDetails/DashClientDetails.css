@@ -1,0 +1,5 @@
+.dashClientDetails {
+  background: var(--dash-bg-clr);
+  border-radius: 10px;
+  margin-right: 1em;
+}

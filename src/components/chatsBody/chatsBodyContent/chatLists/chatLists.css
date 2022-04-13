@@ -1,0 +1,11 @@
+.chats-list {
+  background: var(--dash-bg-clr);
+  border-radius: 10px;
+  padding-bottom: 1em;
+}
+
+.chats-list h2 {
+  padding: 1em 0 0 1em;
+  color: var(--sec-clr);
+  font-size: 1.1rem;
+}

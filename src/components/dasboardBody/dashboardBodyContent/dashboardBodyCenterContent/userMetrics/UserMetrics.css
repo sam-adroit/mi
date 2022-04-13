@@ -1,0 +1,64 @@
+.userMetrics {
+  background: var(--dash-bg-clr);
+  display: flex;
+  padding: 0.8em 0 0 0.8em;
+  border-radius: 10px;
+}
+
+.left-details {
+  display: flex;
+  align-items: center;
+}
+
+.userDetails {
+  color: var(--sec-clr);
+}
+
+.userDetails .au {
+  font-size: 1.1rem;
+}
+
+.userDetails .no {
+  font-size: 2rem;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.userDetails p {
+  font-size: 0.8rem;
+}
+
+.circular-bar {
+  margin-left: 0.7em;
+}
+
+.outer-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: conic-gradient(
+    #1eec33 0deg,
+    #20e734 270deg,
+    #bab4b4 270deg
+  );
+}
+
+.inner-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--dash-bg-clr);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #20e734;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.graph-details {
+  margin-left: 4em;
+}

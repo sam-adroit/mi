@@ -1,0 +1,20 @@
+.chat-log {
+  background: var(--dash-bg-clr);
+  border-radius: 10px;
+}
+
+.chat-log h2 {
+  font-size: 1.25rem;
+  color: var(--sec-clr);
+  padding: 1em 0 0 1em;
+}
+
+.chat-log > p {
+  text-align: center;
+  color: var(--sec-clr);
+  padding: 1em 0;
+}
+
+.chat-log > p:hover {
+  cursor: pointer;
+}
