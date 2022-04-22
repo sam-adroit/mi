@@ -1,4 +1,7 @@
 import React from "react";
+import { useContext } from "react";
+import { authContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { BsChatFill } from "react-icons/bs";
@@ -8,6 +11,8 @@ import { RiSettings4Fill, RiLogoutCircleFill } from "react-icons/ri";
 import "./Sidebar.css";
 
 function Sidebar() {
+  const { logout } = useContext(authContext);
+  const navigate = useNavigate();
   return (
     <div className="Sidebar">
       <div className="dash-logo">
@@ -39,8 +44,14 @@ function Sidebar() {
             <span>Settings</span>
           </Link>
         </li>
-        <li className="dash--nav-list-item">
-          <Link to="/login" className="sidebar-link">
+        <li
+          className="dash--nav-list-item"
+          onClick={() => {
+            logout();
+            navigate("/");
+          }}
+        >
+          <Link to="/" className="sidebar-link">
             <RiLogoutCircleFill />
             <span>Logout</span>
           </Link>
