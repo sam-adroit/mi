@@ -14,7 +14,7 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
 
   // const navigate = useNavigate();
-  const { login, isLoggedIn, setIsLoggedIn } = useContext(authContext);
+  const { login, setIsLoggedIn } = useContext(authContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
