@@ -11,7 +11,7 @@ const AuthContextProvider = (props) => {
 
   const login = (tokn) => {
     setToken(tokn);
-    console.log("1", isLoggedIn);
+    // console.log("1", isLoggedIn);
     localStorage.setItem("token", tokn);
   };
 

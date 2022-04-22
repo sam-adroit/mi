@@ -31,9 +31,8 @@ function LoginForm() {
         setIsLoggedIn(true);
         localStorage.setItem("isLogin", true);
         login(res.data.token);
-        console.log("4", isLoggedIn);
+        // console.log("4", isLoggedIn);
         navigate("/dashboard");
-        setLoading(false);
       })
       .catch(() => {
         setErr(true);

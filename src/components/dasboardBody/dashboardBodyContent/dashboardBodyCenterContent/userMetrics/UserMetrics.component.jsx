@@ -43,13 +43,11 @@ function UserMetrics() {
           options={{
             maintainAspectRatio: false,
             scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
+              yAxes: {
+                ticks: {
+                  beginAtZero: true,
                 },
-              ],
+              },
             },
           }}
         />
