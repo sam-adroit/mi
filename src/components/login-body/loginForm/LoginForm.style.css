@@ -12,6 +12,18 @@
   margin-bottom: 5em;
 }
 
+@media (max-width: 600px) {
+  .login-form {
+    width: 90%;
+    margin: 3em auto;
+    padding-bottom: 2em;
+  }
+
+  .login-form h4 {
+    margin-bottom: 2em;
+  }
+}
+
 .login-form-field {
   width: 85%;
   margin: 0 auto;

@@ -4,14 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import SidebarContextProvider from "./context/SidebarContext";
 import AuthContextProvider from "./context/AuthContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <SidebarContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </SidebarContextProvider>
     </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById("root")

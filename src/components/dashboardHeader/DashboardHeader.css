@@ -9,6 +9,11 @@
   padding: 1.8em 0;
   margin-right: 5%;
 }
+
+.mobile-hamburger--search {
+  display: none;
+}
+
 .search-pos {
   position: relative;
 }
@@ -60,4 +65,45 @@
 .alarm-user {
   font-size: 0.95rem;
   color: var(--sec-clr);
+}
+
+@media (max-width: 600px) {
+  .dashboarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em;
+    position: relative;
+  }
+  .search-and-user {
+    margin: 0;
+    padding: 0;
+  }
+  .search-pos {
+    display: none;
+  }
+
+  .mobile-hamburger--search {
+    display: block;
+    color: var(--sec-clr);
+  }
+
+  .mobile-hamburger--search .hamb,
+  .mobile-hamburger--search .search {
+    font-size: 1.3rem;
+  }
+
+  .mobile-hamburger--search .hamb {
+    padding-right: 0.5em;
+    position: absolute;
+    z-index: 99;
+  }
+
+  .mobile-hamburger--search .search {
+    margin-left: 1.5em;
+  }
+
+  .alarm-user .usr-name {
+    display: none;
+  }
 }

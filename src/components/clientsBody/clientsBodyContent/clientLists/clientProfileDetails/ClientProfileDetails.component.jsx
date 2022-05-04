@@ -3,11 +3,18 @@ import User from "../../../../../assets/user.png";
 import { BsChatFill } from "react-icons/bs";
 
 import "./clientProfileDetails.css";
+import { useNavigate } from "react-router-dom";
 
 function ClientProfileDetails({ inverterDetail }) {
   const { id, username, client } = inverterDetail;
+  const navigate = useNavigate();
   return (
-    <div className="client-profile-details">
+    <div
+      className="client-profile-details"
+      onClick={() => {
+        window.innerWidth <= 600 && navigate("/clients/details");
+      }}
+    >
       <div className="profile-img">
         <img src={User} alt="" />
       </div>

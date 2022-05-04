@@ -1,0 +1,15 @@
+.conversation-header {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  color: var(--sec-clr);
+  margin: 1em 0.85em;
+}
+
+.conversation-header span {
+  font-size: 1.5rem;
+}
+
+.conversation-header h2 {
+  font-size: 1rem;
+}

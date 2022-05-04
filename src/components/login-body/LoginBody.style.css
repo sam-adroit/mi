@@ -5,3 +5,10 @@
   margin: 0 auto;
   padding-bottom: 8em;
 }
+
+@media (max-width: 600px) {
+  .loginBody {
+    display: block;
+    width: 100%;
+  }
+}

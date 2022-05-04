@@ -2,3 +2,19 @@
   display: flex;
   margin: 1em;
 }
+
+.chat-conversation {
+  flex-grow: 1;
+  background: var(--dash-bg-clr);
+  margin-left: 1em;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .chats-body--content {
+    margin: 0;
+  }
+  .chat-conversation {
+    display: none;
+  }
+}

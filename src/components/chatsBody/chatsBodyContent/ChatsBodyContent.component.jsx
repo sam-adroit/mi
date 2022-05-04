@@ -8,7 +8,9 @@ function ChatsBodyContent() {
   return (
     <div className="chats-body--content">
       <ChatLists />
-      <Converstaion />
+      <div className="chat-conversation">
+        <Converstaion />
+      </div>
     </div>
   );
 }

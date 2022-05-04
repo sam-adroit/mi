@@ -9,3 +9,11 @@
   color: var(--sec-clr);
   font-size: 1.1rem;
 }
+
+@media (max-width: 600px) {
+  .chats-list {
+    border-radius: 0;
+    width: 100%;
+    margin-top: 1em;
+  }
+}

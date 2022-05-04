@@ -18,3 +18,9 @@
 .chat-log > p:hover {
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .chat-log {
+    margin-top: 1em;
+  }
+}

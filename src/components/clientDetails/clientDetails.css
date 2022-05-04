@@ -21,7 +21,7 @@
 }
 
 .client-details-list li .toggle {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   display: inline-block;
   margin-left: 4em;
   color: #2f57e3;
@@ -36,5 +36,19 @@
 }
 
 .client-details-list li .lock {
-  font-size: 2em;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .clientDetails h2 {
+    font-size: 1rem;
+  }
+
+  .client-details-list li {
+    font-size: 0.85rem;
+  }
+
+  .client-details-list li .toggle {
+    font-size: 2rem;
+  }
 }

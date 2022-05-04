@@ -36,3 +36,13 @@
   margin-left: 2em;
   color: var(--sec-clr);
 }
+
+@media (max-width: 600px) {
+  .client-profile-details {
+    justify-content: flex-start;
+  }
+
+  .client-profile-details .message {
+    margin-left: auto;
+  }
+}

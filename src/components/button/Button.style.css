@@ -8,7 +8,21 @@
 .dark {
   background: var(--pry-clr);
   color: var(--sec-clr);
-  padding: 0.8rem 3.125rem;
+  padding: 0.8em 3.125em;
+}
+
+@media (max-width: 600px) {
+  .btn {
+    font-size: 1rem;
+  }
+
+  .dark {
+    padding: 0.7em 1em;
+  }
+
+  .light {
+    display: none;
+  }
 }
 
 .dark:hover {

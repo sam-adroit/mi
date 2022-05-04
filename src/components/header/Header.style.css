@@ -41,3 +41,17 @@
   display: flex;
   gap: 50px;
 }
+
+@media (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+
+  .nav-btn {
+    gap: 1em;
+  }
+
+  .header-logo img {
+    width: 40px;
+  }
+}

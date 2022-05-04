@@ -1,3 +1,9 @@
 .dashboardBodyContent {
   display: flex;
 }
+
+@media (max-width: 600px) {
+  .dashboardBodyContent {
+    display: block;
+  }
+}

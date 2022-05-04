@@ -17,6 +17,16 @@
   border-radius: 10px;
 }
 
+@media (max-width: 600px) {
+  .dashboard-sidebar--content {
+    margin: 1em;
+    padding-bottom: 1em;
+  }
+  .control--panel-content {
+    width: calc(100% - 2em);
+  }
+}
+
 .control--panel-content h2 {
   color: var(--sec-clr);
   margin: 1em 1em 0 1em;

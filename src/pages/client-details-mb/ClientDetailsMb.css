@@ -1,0 +1,22 @@
+.mb-header {
+  color: var(--sec-clr);
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  margin: 0.85em 0.75em 0;
+}
+
+.mb-header span {
+  font-size: 1.5rem;
+}
+
+.mb-header h2 {
+  font-size: 1rem;
+}
+
+.mb-client-details {
+  background: var(--dash-bg-clr);
+  margin: 0.75em;
+  padding: 0.5em;
+  border-radius: 10px;
+}

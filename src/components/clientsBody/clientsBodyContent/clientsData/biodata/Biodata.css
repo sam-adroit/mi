@@ -1,0 +1,22 @@
+.biodata p {
+  font-size: 0.85rem;
+  padding: 0.2em 0;
+  color: #a7a7a7;
+}
+
+.biodata p span {
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--sec-clr);
+  padding-right: 1em;
+}
+
+@media (max-width: 600px) {
+  .biodata p span {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .biodata p {
+    font-size: 0.75rem;
+  }
+}

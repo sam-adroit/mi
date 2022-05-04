@@ -5,6 +5,12 @@
   flex-grow: 1;
 }
 
+@media (max-width: 600px) {
+  .client-data {
+    display: none;
+  }
+}
+
 .client-address {
   margin: 1em 0 0 1em;
 }

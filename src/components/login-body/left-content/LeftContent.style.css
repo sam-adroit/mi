@@ -14,3 +14,19 @@
   color: var(--sec-clr);
   font-size: var(--fs-m);
 }
+
+@media (max-width: 600px) {
+  .left-content {
+    width: 60%;
+    margin: 2em auto;
+  }
+
+  .left-content img {
+    width: 150px;
+    margin: 0 auto 20px;
+  }
+
+  .left-content p {
+    font-size: 1rem;
+  }
+}

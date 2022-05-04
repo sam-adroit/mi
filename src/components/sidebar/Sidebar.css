@@ -45,3 +45,18 @@
   padding-left: 0.6em;
   letter-spacing: 1.5px;
 }
+
+@media (max-width: 600px) {
+  .Sidebar {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .Show-mb-sidebar {
+    display: block;
+  }
+}

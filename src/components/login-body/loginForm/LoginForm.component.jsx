@@ -13,7 +13,6 @@ function LoginForm() {
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // const navigate = useNavigate();
   const { login, setIsLoggedIn } = useContext(authContext);
 
   const handleSubmit = (e) => {
@@ -31,38 +30,12 @@ function LoginForm() {
         setIsLoggedIn(true);
         localStorage.setItem("isLogin", true);
         login(res.data.token);
-        // console.log("4", isLoggedIn);
         navigate("/dashboard");
       })
       .catch(() => {
         setErr(true);
         setLoading(false);
       });
-
-    // fetch("https://inverterdev.herokuapp.com/auth/signin-admin", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     username,
-    //     password,
-    //   }),
-    //   headers: {
-    //     "Content-type": "application/json",
-    //   },
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     // console.log(json);
-    //     setIsLoggedIn(true);
-    //     localStorage.setItem("isLogin", true);
-    //     login(data.token);
-    //     console.log("4", isLoggedIn);
-    //     navigate("/dashboard");
-    //     setLoading(false);
-    //   })
-    //   .catch(() => {
-    //     setErr(true);
-    //     setLoading(false);
-    //   });
   };
 
   return (

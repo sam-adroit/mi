@@ -1,6 +1,6 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { authContext } from "../../context/AuthContext";
+import { SidebarContext } from "../../context/SidebarContext";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -12,9 +12,10 @@ import "./Sidebar.css";
 
 function Sidebar() {
   const { logout } = useContext(authContext);
+  const { sidebar } = useContext(SidebarContext);
   const navigate = useNavigate();
   return (
-    <div className="Sidebar">
+    <div className={sidebar ? "Show-mb-sidebar Sidebar" : "Sidebar"}>
       <div className="dash-logo">
         <img src={Logo} alt="" />
         <h1>Moon Innovation</h1>

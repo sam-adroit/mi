@@ -13,6 +13,7 @@
   list-style: none;
   padding: 0;
   position: relative;
+  flex: 1;
 }
 
 .input-reading {
@@ -40,6 +41,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 1em 0;
+  flex: 1;
 }
 
 .input-reading li > span,
@@ -47,7 +49,6 @@
   padding: 0.3em 1em;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 100px;
-  margin-left: 1em;
   color: #a7a7a7;
 }
 
@@ -76,4 +77,18 @@
 
 .dash-inverter-details button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .inverter-details h2 {
+    font-size: 1rem;
+  }
+  .input-reading li,
+  .output-reading li {
+    font-size: 0.85rem;
+  }
+  .input-reading li > span,
+  .output-reading li > span {
+    margin-left: 0;
+  }
 }
