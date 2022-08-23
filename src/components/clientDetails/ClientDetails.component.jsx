@@ -16,14 +16,14 @@ function ClientDetails() {
     console.log(token);
     if (inverterSwitch) {
       fetch("https://inverterdev.herokuapp.com/dashboard/status/control_on", {
-        method: "POST",
+        method: "GET",
         headers: {
           Authorization: token,
         },
       }).then((res) => console.log(res));
     } else {
       fetch("https://inverterdev.herokuapp.com/dashboard/status/control_off", {
-        method: "POST",
+        method: "GET",
         headers: {
           Authorization: token,
         },
@@ -34,9 +34,9 @@ function ClientDetails() {
   const handleInverterLock = () => {
     setInverterLock(!inverterLock);
     console.log(token);
-    if (inverterSwitch) {
+    if (inverterLock) {
       fetch("https://inverterdev.herokuapp.com/dashboard/status/control_lock", {
-        method: "POST",
+        method: "GET",
         headers: {
           Authorization: token,
         },
@@ -45,7 +45,7 @@ function ClientDetails() {
       fetch(
         "https://inverterdev.herokuapp.com/dashboard/status/control_unlock",
         {
-          method: "POST",
+          method: "GET",
           headers: {
             Authorization: token,
           },
@@ -60,7 +60,7 @@ function ClientDetails() {
       <ul className="client-details-list">
         <li>MexD: R12</li>
         <li onClick={handleInverterSwitch}>
-          <span>Inverter Telemetry</span>
+          <span>System Status</span>
           {inverterSwitch ? (
             <BsToggle2On className="toggle" />
           ) : (

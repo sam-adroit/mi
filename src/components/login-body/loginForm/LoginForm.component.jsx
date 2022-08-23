@@ -17,14 +17,14 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const username = usernameRef.current.value;
+    const email = usernameRef.current.value;
     const password = passwordRef.current.value;
     setLoading(true);
 
     axios
-      .post("https://inverterdev.herokuapp.com/auth/signin-admin", {
-        username,
-        password,
+      .post("https://mexd-backend.herokuapp.com/signin-admin", {
+        email: email,
+        password: password,
       })
       .then((res) => {
         setIsLoggedIn(true);

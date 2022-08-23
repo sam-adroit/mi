@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+// import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Clients from "./pages/clients/Clients";
@@ -10,6 +11,7 @@ import ChatDetails from "./pages/chats-details-mb/ChatDetails";
 function App() {
   return (
     <Routes>
+      {/* <Route path="/" element={<Home />} /> */}
       <Route path="/" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/clients" element={<Clients />} />

@@ -6,15 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import SidebarContextProvider from "./context/SidebarContext";
 import AuthContextProvider from "./context/AuthContext";
+import InverterDetailsContextProvider from "./context/InverterDetailsContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <SidebarContextProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </SidebarContextProvider>
+      <InverterDetailsContextProvider>
+        <SidebarContextProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </SidebarContextProvider>
+      </InverterDetailsContextProvider>
     </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
