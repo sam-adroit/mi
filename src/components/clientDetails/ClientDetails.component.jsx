@@ -15,14 +15,14 @@ function ClientDetails() {
     setInverterSwitch(!inverterSwitch);
     console.log(token);
     if (inverterSwitch) {
-      fetch("https://inverterdev.herokuapp.com/dashboard/status/control_on", {
+      fetch("https://mexd-backend.herokuapp.com/dashboard/status/control_on", {
         method: "GET",
         headers: {
           Authorization: token,
         },
       }).then((res) => console.log(res));
     } else {
-      fetch("https://inverterdev.herokuapp.com/dashboard/status/control_off", {
+      fetch("https://mexd-backend.herokuapp.com/dashboard/status/control_off", {
         method: "GET",
         headers: {
           Authorization: token,
@@ -35,15 +35,18 @@ function ClientDetails() {
     setInverterLock(!inverterLock);
     console.log(token);
     if (inverterLock) {
-      fetch("https://inverterdev.herokuapp.com/dashboard/status/control_lock", {
-        method: "GET",
-        headers: {
-          Authorization: token,
-        },
-      }).then((res) => console.log(res));
+      fetch(
+        "https://mexd-backend.herokuapp.com/dashboard/status/control_lock",
+        {
+          method: "GET",
+          headers: {
+            Authorization: token,
+          },
+        }
+      ).then((res) => console.log(res));
     } else {
       fetch(
-        "https://inverterdev.herokuapp.com/dashboard/status/control_unlock",
+        "https://mexd-backend.herokuapp.com/dashboard/status/control_unlock",
         {
           method: "GET",
           headers: {
