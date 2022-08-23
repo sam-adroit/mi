@@ -12,7 +12,7 @@ import "./Sidebar.css";
 
 function Sidebar() {
   const { logout } = useContext(authContext);
-  const { sidebar } = useContext(SidebarContext);
+  const { sidebar, setSidebar } = useContext(SidebarContext);
   const navigate = useNavigate();
   return (
     <div className={sidebar ? "Show-mb-sidebar Sidebar" : "Sidebar"}>
@@ -21,25 +21,25 @@ function Sidebar() {
         <h1>Moon Innovation</h1>
       </div>
       <ul className="dash--nav-list">
-        <li className="dash--nav-list-item">
+        <li className="dash--nav-list-item" onClick={() => setSidebar(false)}>
           <Link to="/dashboard" className="sidebar-link">
             <MdDashboard />
             <span>Dashboard</span>
           </Link>
         </li>
-        <li className="dash--nav-list-item">
+        <li className="dash--nav-list-item" onClick={() => setSidebar(false)}>
           <Link to="/clients" className="sidebar-link">
             <FaUserTie />
             <span>Client</span>
           </Link>
         </li>
-        <li className="dash--nav-list-item">
+        <li className="dash--nav-list-item" onClick={() => setSidebar(false)}>
           <Link to="/chats" className="sidebar-link">
             <BsChatFill />
             <span>Chats</span>
           </Link>
         </li>
-        <li className="dash--nav-list-item">
+        <li className="dash--nav-list-item" onClick={() => setSidebar(false)}>
           <Link to="/dashboard" className="sidebar-link">
             <RiSettings4Fill />
             <span>Settings</span>
@@ -48,6 +48,7 @@ function Sidebar() {
         <li
           className="dash--nav-list-item"
           onClick={() => {
+            setSidebar(false);
             logout();
             navigate("/");
           }}
