@@ -29,7 +29,7 @@ function LoginForm() {
       .then((res) => {
         setIsLoggedIn(true);
         localStorage.setItem("isLogin", true);
-        login(res.data.token);
+        login(res.data.data.token);
         navigate("/dashboard");
       })
       .catch(() => {

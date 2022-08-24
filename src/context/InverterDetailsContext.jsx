@@ -19,16 +19,19 @@ function InverterDetailsContextProvider(props) {
     () => sendMessage(payload),
     [sendMessage, payload]
   );
-  //   useEffect(() => {
-  //     handleClickSendMessage();
-  //   }, []);
+  // const handleClickSendMessage = useCallback(() => {
+  //   console.log("Sending to web socket");
+  //   sendMessage(payload);
+  // }, [sendMessage, payload]);
 
   const [inverterDetail, SetInverterDetails] = useState({});
 
   useEffect(() => {
     if (lastMessage !== null) {
-      lastMessage.event === "new_data" &&
-        SetInverterDetails(JSON.parse(lastMessage.data.deviceData));
+      let event = JSON.parse(lastMessage.data).event;
+      let inverterReadings = JSON.parse(lastMessage.data).data.deviceData;
+      console.log(inverterReadings);
+      event === "new_data" && SetInverterDetails(inverterReadings);
     }
   }, [lastMessage]);
 

@@ -12,6 +12,7 @@ function DashboardHeader() {
   const [alarm, setAlarm] = useState(false);
   const { token } = useContext(authContext);
   const { sidebar, setSidebar } = useContext(SidebarContext);
+
   const alarmCtrl = () => {
     setAlarm(!alarm);
     if (alarm) {
@@ -23,7 +24,7 @@ function DashboardHeader() {
             Authorization: token,
           },
         }
-      ).then((res) => console.log(res));
+      );
     } else {
       fetch(
         "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=alarm%20%off",
@@ -33,7 +34,7 @@ function DashboardHeader() {
             Authorization: token,
           },
         }
-      ).then((res) => console.log(res));
+      );
     }
   };
   return (
