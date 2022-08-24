@@ -15,28 +15,8 @@ function ClientDetails() {
     setInverterSwitch(!inverterSwitch);
     console.log(token);
     if (inverterSwitch) {
-      fetch("https://mexd-backend.herokuapp.com/dashboard/status/control_on", {
-        method: "GET",
-        headers: {
-          Authorization: token,
-        },
-      }).then((res) => console.log(res));
-    } else {
-      fetch("https://mexd-backend.herokuapp.com/dashboard/status/control_off", {
-        method: "GET",
-        headers: {
-          Authorization: token,
-        },
-      }).then((res) => console.log(res));
-    }
-  };
-
-  const handleInverterLock = () => {
-    setInverterLock(!inverterLock);
-    console.log(token);
-    if (inverterLock) {
       fetch(
-        "https://mexd-backend.herokuapp.com/dashboard/status/control_lock",
+        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=on",
         {
           method: "GET",
           headers: {
@@ -46,7 +26,33 @@ function ClientDetails() {
       ).then((res) => console.log(res));
     } else {
       fetch(
-        "https://mexd-backend.herokuapp.com/dashboard/status/control_unlock",
+        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=off",
+        {
+          method: "GET",
+          headers: {
+            Authorization: token,
+          },
+        }
+      ).then((res) => console.log(res));
+    }
+  };
+
+  const handleInverterLock = () => {
+    setInverterLock(!inverterLock);
+    console.log(token);
+    if (inverterLock) {
+      fetch(
+        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=lock",
+        {
+          method: "GET",
+          headers: {
+            Authorization: token,
+          },
+        }
+      ).then((res) => console.log(res));
+    } else {
+      fetch(
+        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=unlock",
         {
           method: "GET",
           headers: {
