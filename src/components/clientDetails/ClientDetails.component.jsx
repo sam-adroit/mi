@@ -20,7 +20,6 @@ function ClientDetails() {
 
   const handleInverterSwitch = () => {
     timer && setInverterSwitch(!inverterSwitch);
-
     // console.log(token);
     if (timer) {
       setTimer(false);
@@ -51,29 +50,33 @@ function ClientDetails() {
   };
 
   const handleInverterLock = () => {
-    setInverterLock(!inverterLock);
+    timer && setInverterLock(!inverterLock);
     // console.log(token);
-    if (inverterLock) {
-      fetch(
-        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=lock",
-        {
-          method: "GET",
-          headers: {
-            Authorization: token,
-          },
-        }
-      ).then((res) => console.log(res));
-    } else {
-      fetch(
-        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=unlock",
-        {
-          method: "GET",
-          headers: {
-            Authorization: token,
-          },
-        }
-      ).then((res) => console.log(res));
+    if (timer) {
+      setTimer(false);
+      if (inverterLock) {
+        fetch(
+          "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=lock",
+          {
+            method: "GET",
+            headers: {
+              Authorization: token,
+            },
+          }
+        ).then((res) => console.log(res));
+      } else {
+        fetch(
+          "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=unlock",
+          {
+            method: "GET",
+            headers: {
+              Authorization: token,
+            },
+          }
+        ).then((res) => console.log(res));
+      }
     }
+    timeCtrl();
   };
 
   return (
