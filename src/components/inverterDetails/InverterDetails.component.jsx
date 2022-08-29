@@ -17,7 +17,9 @@ function InverterDetails() {
               AC IN/<span className="units">volts</span>
             </p>
             <span className="red">
-              {inverterDetail.battery ? inverterDetail.inverterState : "-"}
+              {inverterDetail.battery
+                ? inverterDetail.acVoltage.toFixed(2)
+                : "-"}
             </span>
           </li>
           <li>
@@ -37,7 +39,9 @@ function InverterDetails() {
               Solar/<span className="units">volts</span>
             </p>
             <span className="red">
-              {inverterDetail.battery ? inverterDetail.solarVolt : "-"}
+              {inverterDetail.battery
+                ? inverterDetail.solarVolt.toFixed(2)
+                : "-"}
             </span>
           </li>
         </ul>
@@ -47,7 +51,9 @@ function InverterDetails() {
               AC OUT/<span className="units">volts</span>
             </p>
             <span className="red">
-              {inverterDetail.battery ? inverterDetail.acVoltage : "-"}
+              {inverterDetail.battery
+                ? inverterDetail.acVoltage.toFixed(2)
+                : "-"}
             </span>
           </li>
           <li>
@@ -55,7 +61,7 @@ function InverterDetails() {
               Battery <span className="units">%</span>
             </p>
             <span className="green">
-              {inverterDetail.battery ? inverterDetail.battery : "-"}
+              {inverterDetail.battery ? inverterDetail.battery.toFixed(1) : "-"}
             </span>
           </li>
           <li>
@@ -71,7 +77,9 @@ function InverterDetails() {
               Temp/<span className="units">&#176;C</span>
             </p>
             <span className="green">
-              {inverterDetail.battery ? inverterDetail.temperature : "-"}
+              {inverterDetail.battery
+                ? inverterDetail.temperature.toFixed(2)
+                : "-"}
             </span>
           </li>
         </ul>

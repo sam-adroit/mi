@@ -10,11 +10,19 @@ import "./DashboardHeader.css";
 
 function DashboardHeader() {
   const [alarm, setAlarm] = useState(false);
+  const [timer, setTimer] = useState(true);
   const { token } = useContext(authContext);
   const { sidebar, setSidebar } = useContext(SidebarContext);
 
+  const timeCtrl = () => {
+    setTimeout(() => {
+      setTimer(true);
+    }, 10000);
+  };
+
   const alarmCtrl = () => {
     setAlarm(!alarm);
+    setTimer(false);
     if (alarm) {
       fetch(
         "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=alarm%20%on",
@@ -36,6 +44,7 @@ function DashboardHeader() {
         }
       );
     }
+    timeCtrl();
   };
   return (
     <div className="dashboarHeader">
@@ -61,9 +70,15 @@ function DashboardHeader() {
           <BsSearch className="search-icon" />
         </div>
         <div className="alarm-user">
-          <span className="alarm-icon" onClick={alarmCtrl}>
-            <BsBellFill />
-          </span>
+          {timer ? (
+            <span className="alarm-icon" onClick={alarmCtrl}>
+              <BsBellFill />
+            </span>
+          ) : (
+            <span className="alarm-icon">
+              <BsBellFill />
+            </span>
+          )}
 
           <img src={User} alt="" />
           <span className="usr-name">Mark Johnson</span>

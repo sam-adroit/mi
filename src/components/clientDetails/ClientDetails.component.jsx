@@ -10,36 +10,49 @@ function ClientDetails() {
   const { token } = useContext(authContext);
   const [inverterSwitch, setInverterSwitch] = useState(false);
   const [inverterLock, setInverterLock] = useState(false);
+  const [timer, setTimer] = useState(true);
+
+  const timeCtrl = () => {
+    setTimeout(() => {
+      setTimer(true);
+    }, 10000);
+  };
 
   const handleInverterSwitch = () => {
-    setInverterSwitch(!inverterSwitch);
-    console.log(token);
-    if (inverterSwitch) {
-      fetch(
-        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=on",
-        {
-          method: "GET",
-          headers: {
-            Authorization: token,
-          },
-        }
-      ).then((res) => console.log(res));
-    } else {
-      fetch(
-        "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=off",
-        {
-          method: "GET",
-          headers: {
-            Authorization: token,
-          },
-        }
-      ).then((res) => console.log(res));
+    timer && setInverterSwitch(!inverterSwitch);
+
+    // console.log(token);
+    if (timer) {
+      setTimer(false);
+      if (inverterSwitch) {
+        fetch(
+          "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=on",
+          {
+            method: "GET",
+            headers: {
+              Authorization: token,
+            },
+          }
+        ).then((res) => console.log(res));
+      } else {
+        fetch(
+          "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=off",
+          {
+            method: "GET",
+            headers: {
+              Authorization: token,
+            },
+          }
+        ).then((res) => console.log(res));
+      }
     }
+
+    timeCtrl();
   };
 
   const handleInverterLock = () => {
     setInverterLock(!inverterLock);
-    console.log(token);
+    // console.log(token);
     if (inverterLock) {
       fetch(
         "https://mexd-backend.herokuapp.com/control?deviceId=mo0001&instruction=lock",
